@@ -10,17 +10,28 @@
     <head>
         <body>
 <h4>Larmsystem Wigellkoncern</h4>
+<div id="pinContainer">
+    <p></p>
+</div>
+
+
+<form id="pinForm">
+    <h4>Logga in med PIN-kod för att aktivera alarm</h4>
+    <label for="pinInput">Ange PIN-kod:</label>
+    <input type="password" id="pinInput" name="pinInput" maxlength="5" placeholder="Minst 5 tecken">
+    <button type="submit">Aktivera</button>
+    <p id="validation"></p>
+</form>
+<p id="message"></p>
 <div id="alarmBtns"><p>Aktivera larmen</p>
 <button id="activateFirealarm">Aktivera brandalarm</button>
 <button id="activateBurglaralarm">Aktivera inbrottsalarm</button>
 <button id="activateFireandBurglar">Aktivera brand- och inbrottsalarm</button></div>
 
-<form id="pinForm">
-    <label for="pinInput">Ange PIN-kod:</label>
-    <input type="password" id="pinInput" name="pinInput" maxlength="5" placeholder="Minst 5 tecken">
-    <button type="submit">Aktivera</button>
-</form>
-<p i="message"></p>
+
+<div id="alertFire">
+    <button id="closeBtn">Stäng ruta</button>
+</div>
 
             <script src="script.js"></script>
         </body>
