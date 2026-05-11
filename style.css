@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+#alarmBtns {
+background-color:rgb(233, 229, 229);
+color: rgb(8, 0, 0);
+padding: 30px;
+text-align: center;
+}
+#activateFirealarm {
+    background-color:rgb(250, 8, 8);
+    color: white;
+    padding: 30px;
+    font-size: 20px;
+}
+#activateBurglaralarm {
+     background-color:rgb(8, 141, 250);
+    color: white;
+    padding: 30px;
+    font-size: 20px;
+}
+#activateFireandBurglar {
+     background-color:rgb(250, 117, 8);
+    color: white;
+    padding: 30px;
+    font-size: 20px;
+}
