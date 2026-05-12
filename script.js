@@ -1,3 +1,6 @@
+let isFireActive = false;
+let isBurglarActive = false;
+let isFireBurgActive = false;
 const pin = "1234*"
 const pinForm = document.getElementById("pinForm");
 const pinInput = document.getElementById("pinInput");
@@ -40,13 +43,11 @@ else {
     }
 });
 
-let isAlarmActive = false;
 const activateFirealarm = document.getElementById("activateFirealarm");
-
 activateFirealarm.addEventListener('click', function() {
-isAlarmActive = !isAlarmActive;
+isFireActive = !isFireActive;
 
-    if (isAlarmActive) {
+    if (isFireActive) {
 this.textContent = "Deaktivera brandalarmet";
 this.style.backgroundColor = "green";
 document.getElementById("alertFire").style.display = "block";
@@ -56,17 +57,67 @@ document.getElementById("deactivateAlarmBtn").style.display = "none";
     this.textContent = "Aktivera brandalarm";
     this.style.backgroundColor = "red";
     document.body.style.backgroundColor = "";
-document.getElementById("deactiveAlarmBtn").style.display = "block";
+document.getElementById("deactivateAlarmBtn").style.display = "block";
 document.getElementById("alertFire").style.display = "none";
 }
 });
 
-
+//Knappfunktioner brandalarm
 document.getElementById("closeBtn").addEventListener("click", function() {
     document.getElementById("alertFire").style.display = "none";
 });
+//avaktivera brandalarm
+document.getElementById("closeDeactivateBtn").addEventListener("click", function() {
+    document.getElementById("deactivateAlarmBtn").style.display = "none";
+});
 
-const alertDeactive = document.getElementById("closeDeactivateBtn");
-alertDeactive.addEventListener("click", function() {
-    document.getElementById("deactiveAlarmBtn").style.display = "none";
+//inbrottsalarm
+const activeBa = document.getElementById("activateBurglaralarm");
+activeBa.addEventListener("click", function() {
+isBurglarActive = !isBurglarActive;
+
+if (isBurglarActive) {
+    this.textContent = "Deaktivera inbrottsalarmet";
+    this.style.backgroundColor = "green";
+    document.getElementById("burglarAlarm").style.display = "block";
+    document.getElementById("deactivateBurglar").style.display = "none";
+}
+else {
+    this.textContent ="Aktivera inbrottsalarm";
+    this.style.backgroundColor = "rgb(8, 141, 250)";
+    document.getElementById("burglarAlarm").style.display = "none";
+    document.getElementById("deactivateBurglar").style.display = "block";
+}
+});
+
+document.getElementById("closeActiveB").addEventListener("click", function() {
+    document.getElementById("burglarAlarm").style.display = "none";
+});
+document.getElementById("closeDeactivateB").addEventListener("click", function() {
+    document.getElementById("deactivateBurglar").style.display = "none";
+});
+
+//För inbrotts och brandalarm
+document.getElementById("activateFireandBurglar").addEventListener("click", function() {
+isFireBurgActive = !isFireBurgActive;
+
+if (isFireBurgActive) {
+    this.textContent = "Deaktivera brand- och inbrottsalarmet";
+    this.style.backgroundColor = "green";
+    document.getElementById("divFireBurg").style.display = "block";
+    document.getElementById("deactivateFireBurg").style.display = "none";
+}
+else {
+    this.textContent ="Aktivera brand- och inbrottsalarm";
+    this.style.backgroundColor = "rgb(250, 117, 8)";
+    document.getElementById("divFireBurg").style.display = "none";
+    document.getElementById("deactivateFireBurg").style.display = "block";
+}
+});
+document.getElementById("closeFB").addEventListener("click", function() {
+    document.getElementById("divFireBurg").style.display = "none";
+});
+//avaktivera brandalarm
+document.getElementById("closeDeactivateFB").addEventListener("click", function() {
+    document.getElementById("deactivateFireBurg").style.display = "none";
 });

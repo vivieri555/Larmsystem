@@ -46,8 +46,8 @@ width: 40%;
 height: 40%;
 background-color: rgb(241, 13, 184);
 }
-#deactiveAlarmBtn {
-    padding: 40px;
+#deactivateAlarmBtn {
+padding: 40px;
 display: none;
 position: fixed;
 z-index: 1000;
@@ -56,6 +56,50 @@ top: 0;
 width: 40%;
 height: 40%;
 background-color: rgb(199, 241, 13);
+}
+#deactivateBurglar {
+padding: 40px;
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 40%;
+height: 40%;
+background-color: rgb(199, 241, 13);
+}
+#burglarAlarm {
+padding: 40px;
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 40%;
+height: 40%;
+background-color: rgb(199, 241, 13);
+}
+#divFireBurg {
+padding: 40px;
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 40%;
+height: 40%;
+background-color: rgb(199, 241, 13);
+}
+#deactivateFireBurg {
+padding: 40px;
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 40%;
+height: 40%;
+background-color: rgb(199, 241, 13)
 }
 #validation {
 color: green;
@@ -68,6 +112,22 @@ color: green;
     cursor: pointer;
 }
 #closeDeactivateBtn {
+padding: 10px 20px;
+cursor: pointer;
+}
+#closeActiveB {
+padding: 10px 20px;
+cursor: pointer;
+}
+#closeDeactivateB{
+padding: 10px 20px;
+cursor: pointer;
+}
+#closeFB {
+padding: 10px 20px;
+cursor: pointer;
+}
+#closeDeactivateFB {
 padding: 10px 20px;
 cursor: pointer;
 }
