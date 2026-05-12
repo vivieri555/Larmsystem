@@ -42,9 +42,20 @@ position: fixed;
 z-index: 1000;
 left: 0;
 top: 0;
-width: 100%;
-height: 100%;
-background-color: rgb(18, 3, 153);
+width: 40%;
+height: 40%;
+background-color: rgb(241, 13, 184);
+}
+#deactiveAlarmBtn {
+    padding: 40px;
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 40%;
+height: 40%;
+background-color: rgb(199, 241, 13);
 }
 #validation {
 color: green;
@@ -55,4 +66,8 @@ color: green;
 #closeBtn {
     padding: 10px 20px;
     cursor: pointer;
+}
+#closeDeactivateBtn {
+padding: 10px 20px;
+cursor: pointer;
 }

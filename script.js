@@ -40,25 +40,33 @@ else {
     }
 });
 
+let isAlarmActive = false;
 const activateFirealarm = document.getElementById("activateFirealarm");
+
 activateFirealarm.addEventListener('click', function() {
-    var alarmBtns = document.getElementById('activateFirealarm');
-    if (alarmBtns.style.display === 'none' || alarmBtns.style.display === '') {
-alarmBtns.style.display = 'block';
-this.textContent = "BRANDALARM AKTIVERAT";
- } else {
-   // alarmBtns.style.display = 'none';
+isAlarmActive = !isAlarmActive;
+
+    if (isAlarmActive) {
+this.textContent = "Deaktivera brandalarmet";
+this.style.backgroundColor = "green";
+document.getElementById("alertFire").style.display = "block";
+document.getElementById("deactivateAlarmBtn").style.display = "none";
+    }
+ else {
     this.textContent = "Aktivera brandalarm";
+    this.style.backgroundColor = "red";
+    document.body.style.backgroundColor = "";
+document.getElementById("deactiveAlarmBtn").style.display = "block";
+document.getElementById("alertFire").style.display = "none";
 }
 });
 
-const alert = document.getElementById("alertFire");
-alert.addEventListener("click", function() {
-    var fireAlert = document.getElementById("alertFire").style.display = "block";
-
-    alert("ALARMET ÄR NU AKTIVERAT TEST");
-});
 
 document.getElementById("closeBtn").addEventListener("click", function() {
     document.getElementById("alertFire").style.display = "none";
-})
+});
+
+const alertDeactive = document.getElementById("closeDeactivateBtn");
+alertDeactive.addEventListener("click", function() {
+    document.getElementById("deactiveAlarmBtn").style.display = "none";
+});
