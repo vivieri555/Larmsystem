@@ -5,10 +5,13 @@ body {
     min-height: 100vh;
     margin: 0;
     flex-direction: column;
-    background-color:rgb(201, 222, 231)
+    background-color:rgb(201, 222, 231);
+    padding: 20px;
 }
 #alarmBtns {
 display: none;
+gap: 15px;
+margin: 15px;
 background-color:rgb(233, 229, 229);
 color: rgb(8, 0, 0);
 padding: 30px;
@@ -19,6 +22,19 @@ text-align: center;
     color: white;
     padding: 30px;
     font-size: 20px;
+}
+.blink-active {
+    animation: blink 0.6s infinite alternate;
+}
+@keyframes blink {
+from {
+    background-color:rgb(3, 228, 3);
+    transform: scale(1);
+}
+to {
+    background-color:green;
+    transform: scale(1.03);
+}
 }
 #activateBurglaralarm {
      background-color:rgb(8, 141, 250);

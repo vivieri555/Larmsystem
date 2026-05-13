@@ -23,7 +23,6 @@ else {
     message.style.color = "red";
     message.textContent = "Kod måste innehålla siffror och *";
     logEvent(`Användaren har skrivit in fel inloggningskod`);
-    return;
 }
 
     if (pinInput.value === pin) {
@@ -42,8 +41,8 @@ else {
         pinInput.value = "";  //tömma fält
         }
         else {
-        message.textContent = "3 misslyckade försök tyvärr";
-        pinInput.disabled = true;    //låsa fältet, byta till annat?
+        message.textContent = `Max 3 misslyckade försök tyvärr`;
+       // pinInput.disabled = true;    //om man vill låsa fältet
         logEvent(`Användaren har gjort 3 felaktiga inloggningar.`);
     }
     }
@@ -58,6 +57,7 @@ this.textContent = "BRANDALARM AKTIV! Deaktivera";
 this.style.backgroundColor = "green";
 document.getElementById("alertFire").style.display = "block";
 document.getElementById("deactivateAlarmBtn").style.display = "none";
+activateFirealarm.classList.add("blink-active");
 logEvent(`Brandalarm aktiverat`);
     }
  else {
@@ -66,6 +66,7 @@ logEvent(`Brandalarm aktiverat`);
     document.body.style.backgroundColor = "";
 document.getElementById("deactivateAlarmBtn").style.display = "block";
 document.getElementById("alertFire").style.display = "none";
+activateFirealarm.classList.remove("blink-active");
 logEvent(`Brandalarm deaktiverat`);
 }
 });
@@ -89,6 +90,7 @@ if (isBurglarActive) {
     this.style.backgroundColor = "green";
     document.getElementById("burglarAlarm").style.display = "block";
     document.getElementById("deactivateBurglar").style.display = "none";
+    activeBa.classList.add("blink-active");
     logEvent(`Inbrottsalarm aktiverat`);
 }
 else {
@@ -96,6 +98,7 @@ else {
     this.style.backgroundColor = "rgb(8, 141, 250)";
     document.getElementById("burglarAlarm").style.display = "none";
     document.getElementById("deactivateBurglar").style.display = "block";
+    activeBa.classList.remove("blink-active");
     logEvent(`Inbrottsalarm är deaktiverat.`);
 }
 });
@@ -108,7 +111,8 @@ document.getElementById("closeDeactivateB").addEventListener("click", function()
 });
 
 //För inbrotts och brandalarm
-document.getElementById("activateFireandBurglar").addEventListener("click", function() {
+const activateFireandBurglar = document.getElementById("activateFireandBurglar");
+activateFireandBurglar.addEventListener("click", function() {
 isFireBurgActive = !isFireBurgActive;
 
 if (isFireBurgActive) {
@@ -116,6 +120,7 @@ if (isFireBurgActive) {
     this.style.backgroundColor = "green";
     document.getElementById("divFireBurg").style.display = "block";
     document.getElementById("deactivateFireBurg").style.display = "none";
+    activateFireandBurglar.classList.add("blink-active");
     logEvent(`Brand- och inbrottsalarm aktiverat.`);
 }
 else {
@@ -123,6 +128,7 @@ else {
     this.style.backgroundColor = "rgb(250, 117, 8)";
     document.getElementById("divFireBurg").style.display = "none";
     document.getElementById("deactivateFireBurg").style.display = "block";
+    activateFireandBurglar.classList.remove("blink-active");
     logEvent(`Brand- och inbrottsalarm deaktiverat.`);
 }
 });
