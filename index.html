@@ -10,27 +10,27 @@
     <head>
         <body>
 <h4>Larmsystem Wigellkoncern</h4>
-<div id="pinContainer">
-    <p></p>
-</div>
-
 
 <form id="pinForm">
     <h4>Logga in med PIN-kod för att aktivera alarm</h4>
     <label for="pinInput">Ange PIN-kod:</label>
     <input type="password" id="pinInput" name="pinInput" maxlength="5" placeholder="Minst 5 tecken">
-    <button type="submit">Aktivera</button>
+    <button type="submit">Logga in</button>
     <p id="validation"></p>
 </form>
 <p id="message"></p>
 <div id="alarmBtns"><p>Aktivera larmen</p>
 <button id="activateFirealarm">Aktivera brandalarm</button>
 <button id="activateBurglaralarm">Aktivera inbrottsalarm</button>
-<button id="activateFireandBurglar">Aktivera brand- och inbrottsalarm</button></div>
+<button id="activateFireandBurglar">Aktivera brand- och inbrottsalarm</button>
+<div>
+    <button id="loggingBtn">Se loggningshändelser</button>
+<ul id="eventList"></ul>
+</div></div>
 
 
 <div id="alertFire">
-    <h2>OBS BRANDALARM AKTIVERAT!</h2>
+    <h2>OBS BRANDALARM AKTIVERAT! <i id="lightbulb" class="bi bi-lightbulb-fill"></i></h2>
     <button id="closeBtn">Stäng ruta</button>
 </div>
 <div id="deactivateAlarmBtn">
@@ -39,7 +39,7 @@
 </div>
 
 <div id="burglarAlarm">
-    <h2>INBROTTSALARM AKTIVERAT!</h2>
+    <h2>INBROTTSALARM AKTIVERAT! <i id="lightbulb" class="bi bi-lightbulb-fill"></i></h2>
     <button id="closeActiveB">Stäng ruta</button>
 </div>
 <div id="deactivateBurglar">
@@ -48,13 +48,14 @@
 </div>
 
 <div id="divFireBurg">
-    <h2>OBS Brandalarm och Inbrottsaralm aktiverat!</h2>
+    <h2>OBS BRAND- OCH INBROTTSALARM AKTIVERAT! <i id="lightbulb" class="bi bi-lightbulb-fill"></i></h2>
     <button id="closeFB">Stäng ruta</button>
 </div>
 <div id="deactivateFireBurg">
     <h2>Deaktiverat alarm</h2>
     <button id="closeDeactivateFB">Stäng ruta</button>
 </div>
+
             <script src="script.js"></script>
         </body>
     </head>

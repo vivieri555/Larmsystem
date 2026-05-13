@@ -5,6 +5,7 @@ body {
     min-height: 100vh;
     margin: 0;
     flex-direction: column;
+    background-color:rgb(201, 222, 231)
 }
 #alarmBtns {
 display: none;
@@ -77,7 +78,7 @@ left: 0;
 top: 0;
 width: 40%;
 height: 40%;
-background-color: rgb(199, 241, 13);
+background-color: rgb(241, 13, 184);
 }
 #divFireBurg {
 padding: 40px;
@@ -88,7 +89,7 @@ left: 0;
 top: 0;
 width: 40%;
 height: 40%;
-background-color: rgb(199, 241, 13);
+background-color: rgb(241, 13, 184);
 }
 #deactivateFireBurg {
 padding: 40px;
@@ -130,4 +131,29 @@ cursor: pointer;
 #closeDeactivateFB {
 padding: 10px 20px;
 cursor: pointer;
+}
+#loggingBtn {
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+}
+#eventList {
+    display: none;
+    max-width: 100%;
+    margin-top: 20px;
+    list-style-type: none;
+    li:nth-child(odd) {
+        background-color:rgb(240, 205, 152);
+    }
+    li:nth-child(even) {
+    background-color:rgb(245, 228, 202);
+    }
+    li:hover {
+        background-color:rgb(194, 180, 159);
+        border: 5px solid rgb(235, 219, 235);
+        cursor:grab;
+    }
+}
+#lightbulb {
+    color:rgb(227, 243, 9) !important;
 }
